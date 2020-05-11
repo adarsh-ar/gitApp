@@ -16,7 +16,6 @@ public class GitService {
     @Autowired
     GitAdapter gitAdapter;
     public List<Items> getHotRepos(){
-        System.out.println("hh");
         return gitAdapter.getHotRepos().getBody().getItems().stream().filter(Objects::nonNull)
                  .collect(Collectors.toList());
     }
