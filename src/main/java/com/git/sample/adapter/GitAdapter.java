@@ -29,7 +29,6 @@ public class GitAdapter {
         String pattern = "yyyy-MM-dd";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
         String url=String.format(hotRepoUri,simpleDateFormat.format(utils));
-        System.out.println(url);
         return restTemplate.exchange(url, HttpMethod.GET,getEntity(),RespResponse.class);
     }
 
